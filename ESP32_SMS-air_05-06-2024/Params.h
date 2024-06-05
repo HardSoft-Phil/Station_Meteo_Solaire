@@ -136,24 +136,24 @@ void IRAM_ATTR windTick(void);
 //===========================================
 // Identifiants de connection pour le wifi
 // WiFi AP SSID
-#define WIFI_SSID "Nomad-box"
+#define WIFI_SSID "YOUR_SSID"
 // WiFi password
-#define WIFI_PASSWORD "000FADA000"
+#define WIFI_PASSWORD "YOUR_PASS"
 
 //===========================================
 // MQTT broker pour NodeRed
 //===========================================
 // Identifiants de connection pour NodeRed
-const char* mqtt_server = "192.168.1.220";
+const char* mqtt_server = "192.168.1.xxx";
 const int mqttPort = 1883;
-const char* mqttUser = "jpc";
+const char* mqttUser = "PASS";
 const char* mqttPassword = "n96sbq2s53qxv234q7tf5t";
 const char mainTopic[20] = "MainTopic/";
 
 //===========================================
 // Influxbd2 connection
 //===========================================
-#define INFLUXDB_URL "http://192.168.1.220:8086" // Raspi4
+#define INFLUXDB_URL "http://192.168.1.xxx:8086" // Raspi4
 // Identifiants de connection pour la base de données "meteo"
 #define INFLUXDB_BUCKET "meteo"
 #define DEVICE "SMS-air" // ESP32 Devkit C v4
@@ -161,28 +161,15 @@ const char mainTopic[20] = "MainTopic/";
 #define INFLUXDB_ORG "7b66dd3e945d7f31"
 
 //===========================================
-//Use optional NVM for backup
-//This is a failsafe for RESET events out of
-//system control
-//===========================================
-//#define USE_EEPROM
-
-//===========================================
 //Anemometer Calibration
 //===========================================
 // 2 switch pulls to GND per revolution.
-#define WIND_TICKS_PER_REVOLUTION 2
+#define WIND_TICKS_PER_REVOLUTION 1
 
 //===========================================
 //General defines
 //===========================================
 #define RSSI_INVALID -9999
-
-//===========================================
-//Set how often to wake and read sensors
-//===========================================
-//const int UpdateIntervalSeconds = 15 * 60;  //Sleep timer (900s) for my normal operation
-//const int UpdateIntervalSeconds = 5 * 60;  //Sleep timer (60s) testing
 
 //===========================================
 // Timezone information
